@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <style>
+      .ttl   { font-weight: bold; font-size: 12px; fill: #fff; }
+      .ttl2  { font-weight: bold; font-size: 12px; fill: #1a1a1a; }
+      .prop  { font-size: 10px; fill: #1a1a1a; }
+      .prop2 { font-size: 10px; fill: #fff; }
+      .rel   { font-size: 10.5px; fill: #2E7D32; font-weight: bold; }
+      .small { font-size: 10px; fill: #555; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Patient node (left) -->
+  <ellipse cx="100" cy="220" rx="78" ry="42" fill="#1565C0" stroke="#0D47A1" stroke-width="1.8"/>
+  <text class="ttl" x="100" y="213" text-anchor="middle">Patient</text>
+  <text class="prop2" x="100" y="230" text-anchor="middle">patient_id</text>
+  <text class="prop2" x="100" y="244" text-anchor="middle">demographics</text>
+
+  <!-- Test nodes (middle column) -->
+  <g transform="translate(330,40)">
+    <ellipse cx="80" cy="35" rx="78" ry="28" fill="#4C9AFF" stroke="#1565C0" stroke-width="1.5"/>
+    <text class="ttl" x="80" y="32" text-anchor="middle">NormalTest</text>
+    <text class="prop2" x="80" y="48" text-anchor="middle">value · classification</text>
+  </g>
+  <g transform="translate(330,115)">
+    <ellipse cx="80" cy="35" rx="78" ry="28" fill="#FFAB00" stroke="#E65100" stroke-width="1.5"/>
+    <text class="ttl" x="80" y="32" text-anchor="middle">AttentionTest</text>
+    <text class="prop2" x="80" y="48" text-anchor="middle">confidence · 95% CI</text>
+  </g>
+  <g transform="translate(330,190)">
+    <ellipse cx="80" cy="35" rx="78" ry="28" fill="#DE350B" stroke="#8B0000" stroke-width="1.5"/>
+    <text class="ttl" x="80" y="32" text-anchor="middle">CriticalTest</text>
+    <text class="prop2" x="80" y="48" text-anchor="middle">votes (per authority)</text>
+  </g>
+
+  <!-- Disease Risk nodes (lower middle) -->
+  <g transform="translate(330,290)">
+    <ellipse cx="80" cy="28" rx="78" ry="26" fill="#C62828" stroke="#8B0000" stroke-width="1.5"/>
+    <text class="ttl" x="80" y="26" text-anchor="middle">OvertDiseaseRisk</text>
+    <text class="prop2" x="80" y="40" text-anchor="middle">disease_id · conf · DOI</text>
+  </g>
+  <g transform="translate(330,360)">
+    <ellipse cx="80" cy="22" rx="78" ry="22" fill="#FF8F00" stroke="#E65100" stroke-width="1.5"/>
+    <text class="ttl" x="80" y="20" text-anchor="middle">HiddenDiseaseRisk</text>
+    <text class="prop2" x="80" y="34" text-anchor="middle">disease_id · conf · DOI</text>
+  </g>
+
+  <!-- Guideline Authority node (right) -->
+  <ellipse cx="780" cy="135" rx="100" ry="44" fill="#2E7D32" stroke="#1B5E20" stroke-width="1.8"/>
+  <text class="ttl" x="780" y="123" text-anchor="middle">GuidelineAuthority</text>
+  <text class="prop2" x="780" y="140" text-anchor="middle">name · CEBM grade</text>
+  <text class="prop2" x="780" y="155" text-anchor="middle">sensitivity · DOI</text>
+
+  <!-- DataSource (right lower) -->
+  <ellipse cx="780" cy="285" rx="82" ry="30" fill="#9E9E9E" stroke="#616161" stroke-width="1.5"/>
+  <text class="ttl" x="780" y="282" text-anchor="middle">DataSource (TDL)</text>
+  <text class="prop2" x="780" y="297" text-anchor="middle">fallback ranges only</text>
+
+  <!-- Patient -> Test edges -->
+  <line x1="175" y1="200" x2="335" y2="80"  stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <line x1="178" y1="220" x2="335" y2="150" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <line x1="175" y1="240" x2="335" y2="220" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <text class="rel" x="200" y="180">HAS_TEST</text>
+
+  <!-- Patient -> DiseaseRisk edges -->
+  <line x1="170" y1="250" x2="335" y2="320" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <line x1="165" y1="258" x2="335" y2="378" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <text class="rel" x="178" y="320">HAS_DISEASE_RISK</text>
+
+  <!-- Test -> Authority edges -->
+  <line x1="490" y1="80"  x2="685" y2="125" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <line x1="490" y1="150" x2="685" y2="135" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <line x1="490" y1="225" x2="685" y2="148" stroke="#444" stroke-width="1.4" marker-end="url(#ar2)"/>
+  <text class="rel" x="525" y="100">CLASSIFIED_BY</text>
+  <text class="rel" x="525" y="215">VOTED_BY</text>
+
+  <!-- DiseaseRisk -> Test (BASED_ON_TEST) curved -->
+  <path d="M 408 312 C 250 305, 250 260, 332 245" fill="none" stroke="#2E7D32" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#ar2)"/>
+  <text class="rel" x="220" y="285">BASED_ON_TEST</text>
+
+  <!-- Normal test -> DataSource fallback -->
+  <line x1="490" y1="80"  x2="700" y2="275" stroke="#9E9E9E" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#ar2)"/>
+  <text class="small" x="555" y="195">fallback (20 uncovered tests)</text>
+
+  <!-- Provenance chain note -->
+  <rect x="40" y="380" width="290" height="60" rx="6" fill="#F0F4FF" stroke="#1565C0"/>
+  <text class="ttl2" x="185" y="398" text-anchor="middle">Three-hop provenance chain</text>
+  <text class="prop" x="185" y="415" text-anchor="middle">Patient → TestNode → GuidelineAuthority → DOI</text>
+  <text class="small" x="185" y="431" text-anchor="middle">Every disease-risk node is fully traceable.</text>
+
+  <!-- Legend in top-right -->
+  <rect x="700" y="380" width="200" height="60" rx="6" fill="#FAFAFA" stroke="#999"/>
+  <text class="ttl2" x="800" y="398" text-anchor="middle">Edge types</text>
+  <line x1="715" y1="410" x2="745" y2="410" stroke="#444" stroke-width="1.4"/>
+  <text class="prop" x="750" y="414">structural</text>
+  <line x1="715" y1="428" x2="745" y2="428" stroke="#2E7D32" stroke-width="1.4" stroke-dasharray="4,3"/>
+  <text class="prop" x="750" y="432">provenance</text>
+</svg>
