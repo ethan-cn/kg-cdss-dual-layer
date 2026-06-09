@@ -263,7 +263,7 @@ The Doctors Laboratory (TDL) provides population-derived laboratory reference ra
 
 #### 4.3.4 Worked Example: HbA1c = 5.9%
 
-For HbA1c = 5.9%, the four covering authorities produce: ADA votes `ATTENTION` ($s=0.95, e=1.0$), WHO votes `NORMAL` ($s=0.94, e=1.0$), NICE votes `NORMAL` ($s=0.92, e=1.0$), and IFCC votes `ATTENTION` ($s=0.92, e=0.9$). Applying Step 1: the numerator is $0.95\times1.0 + 0.94\times1.0 + 0.92\times1.0 + 0.92\times0.9 = 3.6152$, and the denominator is $1.0+1.0+1.0+0.9 = 3.90$, giving $C_{\text{base}} = 3.6380 / 3.90 = 0.933$. Step 2 yields $B_{\text{consensus}} = +0.02$ (partial consensus: 2 ATTENTION vs 2 NORMAL votes). Step 3: with $n = |\mathcal{A}_t| = 4$ covering authorities, $B_{\text{source}} = \min(0.02\times3, 0.06) = +0.06$. Step 4: $C_{\text{final}} = \min(0.933 + 0.02 + 0.06,\; 1.0) = 1.0$ (capped). Step 5: partial consensus gives $\sigma_{\text{consensus}} = 0.04$, and $\sigma_{\text{source}} = 0.02$ for $|\mathcal{A}_t| = 4 \geq 3$, so $\sigma = \sqrt{0.02^2+0.04^2} = \sqrt{0.002} \approx 0.045$, and the 95% CI is $[1.0 - 1.96\times0.045,\; 1.0] = [0.912,\; 1.0]$. This is recorded as a partial-consensus prediabetes alert requiring follow-up. Note that this worked example is a partial-consensus case with both consensus and source bonuses; the average CI width across the cohort is necessarily smaller because most results have fewer than 4 covering authorities.
+For HbA1c = 5.9%, the four covering authorities produce: ADA votes `ATTENTION` ($s=0.95, e=1.0$), WHO votes `NORMAL` ($s=0.94, e=1.0$), NICE votes `NORMAL` ($s=0.92, e=1.0$), and IFCC votes `ATTENTION` ($s=0.92, e=0.9$). Applying Step 1: the numerator is $0.95\times1.0 + 0.94\times1.0 + 0.92\times1.0 + 0.92\times0.9 = 3.638$, and the denominator is $1.0+1.0+1.0+0.9 = 3.80$, giving $C_{\text{base}} = 3.638 / 3.80 = 0.957$. Step 2 yields $B_{\text{consensus}} = +0.02$ (partial consensus: 2 ATTENTION vs 2 NORMAL votes). Step 3: with $n = |\mathcal{A}_t| = 4$ covering authorities, $B_{\text{source}} = \min(0.02\times3, 0.06) = +0.06$. Step 4: $C_{\text{final}} = \min(0.957 + 0.02 + 0.06,\; 1.0) = 1.0$ (capped). Step 5: partial consensus gives $\sigma_{\text{consensus}} = 0.04$, and $\sigma_{\text{source}} = 0.02$ for $|\mathcal{A}_t| = 4 \geq 3$, so $\sigma = \sqrt{0.02^2+0.04^2} = \sqrt{0.002} \approx 0.045$, and the 95% CI is $[1.0 - 1.96\times0.045,\; 1.0] = [0.912,\; 1.0]$. This is recorded as a partial-consensus prediabetes alert requiring follow-up. Note that this worked example is a partial-consensus case with both consensus and source bonuses; the average CI width across the cohort is necessarily smaller because most results have fewer than 4 covering authorities.
 
 *Table 1. Guideline authority parameters used in the consensus confidence calculation. CEBM grade maps to evidence-level weight $e_i$: 1A $\to$ 1.0, 1B $\to$ 0.9. All authorities carry institutional weight $w_i = 1.0$ as all meet the Oxford CEBM 1A or 1B criterion. Sensitivity $s_i$ is drawn from the cited primary source. All citations refer to the Citation Map entries.*
 
@@ -374,6 +374,8 @@ A companion visualisation of CI width and σ decomposition is provided in **Figu
 | Prediabetes | 37 | 55 | 35 |
 | B12 Deficiency Risk | 24 | 198 | 401 |
 | **Total ≥1 hidden** | **1,356** | **2,145** | **1,547** |
+
+[*] B12 Deficiency Risk counts differ across modes because B1 and B2 are computed by re-classifying patient test values with fixed threshold sets (NICE thresholds for B1; TDL reference range for B2), while Full counts are drawn from the database-deduced disease-risk nodes, which were populated by the consensus classification pipeline. B2 produces 198 because the TDL B12 range (200--900 pmol/L) flags values <200 pmol/L as ATTENTION, capturing the borderline 150--200 range that NICE classifies as ATTENTION in B1. Full produces 401 because the multi-authority consensus pipeline flags more borderline B12 results as ATTENTION than the NICE-only threshold in B1; these additional ATTENTION-classified results fire the B12_Deficiency_Risk hidden rule. The disease-inference rule is identical across all modes: B12=ATTENTION alone triggers the hidden rule, with no suppression mechanism.
 
 ![Figure 8 — Patient-level agreement matrix](../tables/figures/Figure7_PatientAgreement_Matrix.svg)
 
@@ -514,7 +516,7 @@ The most immediate extension we see is multi-omics. Bringing genomic, proteomic,
 | GB | White Blood Cell Count | WHO, WHO-Hb | $4.0$–$11.0 \times 10^{9}$/L | $2.0$–$4.0$ or $11.0$–$20.0 \times 10^{9}$/L | $\leq 2.0$ or $\geq 20.0 \times 10^{9}$/L | 1A |
 | PLA | Platelet Count | WHO, WHO-Hb | $150$–$400 \times 10^{9}$/L | $100$–$150 \times 10^{9}$/L | $\leq 100 \times 10^{9}$/L | 1A |
 | FE | Serum Iron | WHO, NICE | $10$–$30$ $\mu$mol/L | $5$–$10$ $\mu$mol/L | $\leq 5$ $\mu$mol/L | 1A |
-| B12 | Vitamin B12 | NICE | $>300$ ng/L | $200$–$300$ ng/L | $\leq 200$ ng/L | 1A |
+| B12 | Vitamin B12 | NICE | $\geq200$ pmol/L | $150$–$200$ pmol/L | $\leq150$ pmol/L | 1A |
 | FOL | Folate | WHO, NICE | $>3.0$ ng/mL | $2.0$–$3.0$ ng/mL | $\leq 2.0$ ng/mL | 1A |
 | GGT | Gamma-GT | NICE | $<40$ U/L | $40$–$120$ U/L | $\geq 120$ U/L | 1A |
 | GOT | AST | NICE | $<40$ U/L | $40$–$120$ U/L | $\geq 120$ U/L | 1A |
@@ -705,17 +707,17 @@ eta(r, P) = | R  intersect  A_P |  +  | S  intersect  A_P |
 | WHO      | NORMAL  | 0.94   | 1.0    | 0.9400           |
 | NICE     | NORMAL  | 0.92   | 1.0    | 0.9200           |
 | IFCC     | ATT     | 0.92   | 0.9    | 0.8280           |
-| **Sum**  |         |        |        | **3.6380**       |
+| **Sum**  |         |        |        | **3.638**       |
 
-| Denominator sum | 1.0 + 1.0 + 1.0 + 0.9 = **3.90** |
+| Denominator sum | 1.0 + 1.0 + 1.0 + 0.9 = **3.80** |
 
-**Step 1:** $C_{\text{base}} = 3.6380 / 3.90 =$ **0.933**
+**Step 1:** $C_{\text{base}} = 3.638 / 3.80 =$ **0.957**
 
 **Step 2:** 2 ATT vs 2 NORM → partial agreement → $B_{\text{consensus}} =$ **+0.02**
 
 **Step 3:** $|A_t| = 4 \geq 3$ → $B_{\text{source}} = \min(0.02 \times 3, 0.06) =$ **+0.06**
 
-**Step 4:** $C_{\text{final}} = \min(0.933 + 0.02 + 0.06, 1.0) = \min(1.013, 1.0) =$ **1.0** (capped)
+**Step 4:** $C_{\text{final}} = \min(0.957 + 0.02 + 0.06, 1.0) = \min(1.037, 1.0) =$ **1.0** (capped)
 
 **Step 5:** partial → $\sigma_{\text{consensus}} = 0.04$; $|V(t)| = 4 \geq 3$ → $\sigma_{\text{source}} = 0.02$;
 $\sigma = \sqrt{0.02^2 + 0.04^2} = \sqrt{0.0004 + 0.0016} = \sqrt{0.0020} =$ **0.045**;

@@ -22,6 +22,7 @@ from .disease_inference import (
     SUPPRESSION_MAP,
     fire_overt,
     fire_hidden,
+    infer_diseases,
 )
 
 __all__ = [
@@ -36,4 +37,5 @@ __all__ = [
     "SUPPRESSION_MAP",
     "fire_overt",
     "fire_hidden",
+    "infer_diseases",
 ]

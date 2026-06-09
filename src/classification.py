@@ -67,7 +67,7 @@ WHO_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # ESC — European Society of Cardiology
-# Ref: Eur Heart J 2025;46(3):1-124
+# Ref: Eur Heart J 2021;42(36):3227-3337
 # Note: Diverges from NICE on CRP threshold (CRITICAL >= 3 vs 10)
 ESC_THRESHOLDS: Dict[str, Tuple] = {
     "CHOL":  (None,  190.0, None,  240.0),
@@ -77,7 +77,7 @@ ESC_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # KDIGO — Kidney Disease: Improving Global Outcomes
-# Ref: Kidney Int Suppl 2024;14(4):e1-e314
+# Ref: Kidney Int 2024;105(4S):S117-S314
 KDIGO_THRESHOLDS: Dict[str, Tuple] = {
     "CREA":  (0.6,   1.2,   1.8,   None),
     "URE":   (7.0,   20.0,  42.0,  None),
@@ -85,7 +85,7 @@ KDIGO_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # ATA — American Thyroid Association
-# Ref: Thyroid 2023;33(10):1-120
+# Ref: Thyroid 2014;24(12):1670-1751
 # Note: Diverges from NICE on TSH upper normal (2.5 vs 4.0)
 ATA_THRESHOLDS: Dict[str, Tuple] = {
     "TSH":   (0.4,   2.5,   0.4,   10.0),
@@ -94,7 +94,7 @@ ATA_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # ETA — European Thyroid Association
-# Ref: Eur Thyroid J 2023;12(6):e230133
+# Ref: Eur Thyroid J 2013;2(4):215-228
 ETA_THRESHOLDS: Dict[str, Tuple] = {
     "TSH":   (0.4,   2.5,   0.4,   10.0),
     "T4L":   (12.0,  22.0,  9.0,   30.0),
@@ -131,15 +131,16 @@ AUTHORITY_THRESHOLDS: Dict[str, Dict[str, Tuple]] = {
 
 # Authority metadata
 AUTHORITY_METADATA = {
-    "NICE": {"name": "National Institute for Health and Care Excellence", "evidence": "1A", "weight": 1.0},
-    "ADA":  {"name": "American Diabetes Association", "evidence": "1A", "weight": 0.9},
-    "WHO":  {"name": "World Health Organization", "evidence": "1A", "weight": 0.9},
-    "ESC":  {"name": "European Society of Cardiology", "evidence": "1A", "weight": 0.9},
-    "KDIGO": {"name": "Kidney Disease: Improving Global Outcomes", "evidence": "1A", "weight": 0.9},
-    "ATA":  {"name": "American Thyroid Association", "evidence": "1A", "weight": 0.9},
-    "ETA":  {"name": "European Thyroid Association", "evidence": "2A", "weight": 0.8},
-    "ICSH": {"name": "International Council for Standardization in Haematology", "evidence": "2A", "weight": 0.8},
-    "IFCC": {"name": "International Federation of Clinical Chemistry", "evidence": "2A", "weight": 0.8},
+    "NICE":   {"name": "National Institute for Health and Care Excellence",        "evidence": "1A", "weight": 1.0},
+    "ADA":    {"name": "American Diabetes Association",                            "evidence": "1A", "weight": 1.0},
+    "WHO":    {"name": "World Health Organization",                               "evidence": "1A", "weight": 1.0},
+    "ESC":    {"name": "European Society of Cardiology",                           "evidence": "1A", "weight": 1.0},
+    "KDIGO":  {"name": "Kidney Disease: Improving Global Outcomes",               "evidence": "1A", "weight": 1.0},
+    "ATA":    {"name": "American Thyroid Association",                             "evidence": "1A", "weight": 1.0},
+    "ETA":    {"name": "European Thyroid Association",                             "evidence": "1A", "weight": 1.0},
+    "ICSH":   {"name": "International Council for Standardization in Haematology",  "evidence": "2A", "weight": 1.0},
+    "WHO-Hb": {"name": "World Health Organization Haemoglobin Guidelines",          "evidence": "1B", "weight": 1.0},
+    "IFCC":   {"name": "International Federation of Clinical Chemistry",           "evidence": "1B", "weight": 1.0},
 }
 
 # Ablation configurations for evaluation

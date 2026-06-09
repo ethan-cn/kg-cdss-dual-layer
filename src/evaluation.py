@@ -52,13 +52,13 @@ from .disease_inference import (
 # =============================================================================
 
 TDL_THRESHOLDS: Dict[str, Tuple] = {
-    "A1F":   (None,  5.6,   None,  None),
-    "GLU":   (70.0,  99.0,  None,  None),
+    "A1F":   (None,  5.7,   None,  None),
+    "GLU":   (70.0,  100.0,  None,  None),
     "CHOL":  (None,  200.0, None,  None),
     "LDL":   (None,  100.0, None,  None),
     "TRI":   (None,  150.0, None,  None),
     "CRP":   (None,  5.0,   None,  None),
-    "CREA":  (0.6,   1.3,   None,  None),
+    "CREA":  (0.6,   1.2,   None,  None),
     "URE":   (7.0,   20.0,  None,  None),
     "TSH":   (0.4,   4.0,   None,  None),
     "T4L":   (12.0,  22.0,  None,  None),
