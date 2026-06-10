@@ -102,7 +102,6 @@ ETA_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # ICSH — International Council for Standardization in Haematology
-# Ref: Int J Lab Hematol 2023;45(5):627-648
 ICSH_THRESHOLDS: Dict[str, Tuple] = {
     "HGB":   (12.0,  16.0,  10.0,  None),
     "ERY":   (3.8,   5.8,   3.0,   None),
@@ -111,7 +110,7 @@ ICSH_THRESHOLDS: Dict[str, Tuple] = {
 }
 
 # IFCC — International Federation of Clinical Chemistry and Laboratory Medicine
-# Ref: Clin Chem Lab Med 2024;62(1):1-15
+# Ref: Crit Rev Clin Lab Sci 2018;55(6):420-431 (doi:10.1080/10408363.2018.1482256)
 IFCC_THRESHOLDS: Dict[str, Tuple] = {
     "A1F":   (None,  5.7,   None,  6.5),
 }
