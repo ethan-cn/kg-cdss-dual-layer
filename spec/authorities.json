@@ -1,0 +1,211 @@
+{
+ "note": "Guideline documents of each authority, with the main-text reference number and DOI or web address as printed in the reference list of the revised manuscript (round1/main/draft.rev14.md). An empty link means the printed reference has neither a DOI nor a web address. WHO references 30, 33 and 47 received their who.int publication pages on 2026-10-22 (opened and checked: title and document number or ISBN match), to be added to the reference list (item R2-M1C). refs_by_analyte = the 'Ref.' column of SI Table A.1 (NICE TSH: NG145 [44], range quoted from ATA 2014 [41]).",
+ "authorities": {
+  "NICE": {
+   "name": "National Institute for Health and Care Excellence",
+   "documents": [
+    {
+     "ref": 43,
+     "title": "Type 2 diabetes: prevention in people at high risk (PH38)",
+     "link": "https://www.nice.org.uk/guidance/ph38"
+    },
+    {
+     "ref": 44,
+     "title": "Thyroid disease: assessment and management (NG145)",
+     "link": "https://www.nice.org.uk/guidance/ng145"
+    },
+    {
+     "ref": 45,
+     "title": "Vitamin B12 deficiency in over 16s: diagnosis and management (NG239)",
+     "link": "https://www.nice.org.uk/guidance/ng239"
+    }
+   ],
+   "refs_by_analyte": {
+    "A1F": [
+     43
+    ],
+    "GLU": [
+     43
+    ],
+    "TSH": [
+     44,
+     41
+    ],
+    "B12": [
+     45
+    ]
+   }
+  },
+  "ADA": {
+   "name": "American Diabetes Association",
+   "documents": [
+    {
+     "ref": 29,
+     "title": "2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes, 2025",
+     "link": "https://doi.org/10.2337/dc25-S002"
+    }
+   ],
+   "refs_by_analyte": {
+    "A1F": [
+     29
+    ],
+    "GLU": [
+     29
+    ]
+   }
+  },
+  "WHO": {
+   "name": "World Health Organization",
+   "documents": [
+    {
+     "ref": 30,
+     "title": "Use of glycated haemoglobin (HbA1c) in the diagnosis of diabetes mellitus (2011)",
+     "link": "https://www.who.int/publications/i/item/use-of-glycated-haemoglobin-(-hba1c)-in-diagnosis-of-diabetes-mellitus"
+    },
+    {
+     "ref": 33,
+     "title": "Guideline on haemoglobin cutoffs to define anaemia in individuals and populations (2024)",
+     "link": "https://www.who.int/publications/i/item/9789240088542"
+    },
+    {
+     "ref": 42,
+     "title": "Definition and diagnosis of diabetes mellitus and intermediate hyperglycemia (WHO/IDF 2006)",
+     "link": "https://www.who.int/publications/i/item/definition-and-diagnosis-of-diabetes-mellitus-and-intermediate-hyperglycaemia"
+    },
+    {
+     "ref": 47,
+     "title": "Serum and red blood cell folate concentrations for assessing folate status in populations (2015)",
+     "link": "https://www.who.int/publications/i/item/WHO-NMH-NHD-EPG-15.01"
+    }
+   ],
+   "refs_by_analyte": {
+    "A1F": [
+     30
+    ],
+    "GLU": [
+     42
+    ],
+    "HGB": [
+     33
+    ],
+    "FOL": [
+     47
+    ]
+   }
+  },
+  "ETA": {
+   "name": "European Thyroid Association",
+   "documents": [
+    {
+     "ref": 22,
+     "title": "2013 ETA Guideline: Management of Subclinical Hypothyroidism",
+     "link": "https://doi.org/10.1159/000356507"
+    }
+   ],
+   "refs_by_analyte": {
+    "TSH": [
+     22
+    ]
+   }
+  },
+  "ATA": {
+   "name": "American Thyroid Association",
+   "documents": [
+    {
+     "ref": 41,
+     "title": "Guidelines for the treatment of hypothyroidism (2014)",
+     "link": "https://doi.org/10.1089/thy.2014.0028"
+    }
+   ],
+   "refs_by_analyte": {
+    "TSH": [
+     41
+    ]
+   }
+  },
+  "BCSH": {
+   "name": "British Committee for Standards in Haematology",
+   "documents": [
+    {
+     "ref": 46,
+     "title": "Guidelines for the diagnosis and treatment of cobalamin and folate disorders (2014)",
+     "link": "https://doi.org/10.1111/bjh.12959"
+    }
+   ],
+   "refs_by_analyte": {
+    "B12": [
+     46
+    ],
+    "FOL": [
+     46
+    ]
+   }
+  },
+  "SACN": {
+   "name": "Scientific Advisory Committee on Nutrition",
+   "documents": [
+    {
+     "ref": 48,
+     "title": "Vitamin D and Health (2016)",
+     "link": "https://assets.publishing.service.gov.uk/media/5a804e36ed915d74e622dafa/SACN_Vitamin_D_and_Health_report.pdf"
+    }
+   ],
+   "refs_by_analyte": {
+    "VD3": [
+     48
+    ]
+   }
+  },
+  "ROS": {
+   "name": "Royal Osteoporosis Society (National Osteoporosis Society)",
+   "documents": [
+    {
+     "ref": 49,
+     "title": "National Osteoporosis Society vitamin D guideline summary (2014)",
+     "link": "https://doi.org/10.1093/ageing/afu093"
+    }
+   ],
+   "refs_by_analyte": {
+    "VD3": [
+     49
+    ]
+   }
+  },
+  "UKKA": {
+   "name": "UK Kidney Association",
+   "documents": [
+    {
+     "ref": 50,
+     "title": "Clinical Practice Guidelines: Treatment of Acute Hyperkalaemia in Adults (2020, updated July 2026)",
+     "link": "https://www.ukkidney.org/sites/default/files/documents/FINAL%20VERSION%20-%20UKKA%20CLINICAL%20PRACTICE%20GUIDELINE%20-%20MANAGEMENT%20OF%20HYPERKALAEMIA%20IN%20ADULTS%20-%20UPDATED%20JULY%202026_0.pdf"
+    }
+   ],
+   "refs_by_analyte": {
+    "K": [
+     50
+    ]
+   }
+  },
+  "NCEP": {
+   "name": "National Cholesterol Education Program (Adult Treatment Panel III)",
+   "documents": [
+    {
+     "ref": 51,
+     "title": "Executive Summary of the Third Report of the NCEP Expert Panel (ATP III), 2001",
+     "link": "https://doi.org/10.1001/jama.285.19.2486"
+    }
+   ],
+   "refs_by_analyte": {
+    "CHOL": [
+     51
+    ],
+    "LDL": [
+     51
+    ],
+    "TRI": [
+     51
+    ]
+   }
+  }
+ }
+}

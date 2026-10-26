@@ -1,0 +1,131 @@
+{
+ "status": "D10 (author decision 2026-10-21): one reference interval per test, 11 guideline-covered tests + free T4 and free T3; = SI Table A.2",
+ "note": "Every interval is taken from the published source named in 'source'. One-sided where the source states one limit. A result outside the interval is ATTENTION; there is no CRITICAL tier. Used for free T4/free T3 in every configuration, for the tests not covered by NICE in baseline B1, and for all 13 tests in baseline B2. Source check record: Revision_R1_2026-10/items/D10/D10_sources.md.",
+ "rows": [
+  {
+   "analyte": "A1F",
+   "unit": "%",
+   "high_attention": 5.7,
+   "high_op": "ge",
+   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 29]: prediabetes A1C 5.7-6.4%",
+   "ref": 29,
+   "authority": "RI"
+  },
+  {
+   "analyte": "GLU",
+   "unit": "mg/dL",
+   "high_attention": 100.0,
+   "high_op": "ge",
+   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 29]: IFG 100-125 mg/dL",
+   "ref": 29,
+   "authority": "RI"
+  },
+  {
+   "analyte": "TSH",
+   "unit": "mU/L",
+   "low_attention": 0.4,
+   "high_attention": 4.0,
+   "low_op": "lt",
+   "high_op": "gt",
+   "source": "ATA 2014 (Jonklaas et al.), reference range quoted as 0.4-4.0 mIU/L [main ref 41]",
+   "ref": 41,
+   "authority": "RI"
+  },
+  {
+   "analyte": "T4L",
+   "unit": "pmol/L",
+   "low_attention": 12.0,
+   "high_attention": 22.0,
+   "low_op": "lt",
+   "high_op": "gt",
+   "source": "Roche Elecsys FT4 III method sheet, ref. 07976836190, V3.0 (2021-11): 'Euthyroid: 12-22 pmol/L', 2.5th-97.5th percentiles, n = 801 [main ref 52]",
+   "ref": 52,
+   "authority": "RI"
+  },
+  {
+   "analyte": "T3L",
+   "unit": "pmol/L",
+   "low_attention": 3.1,
+   "high_attention": 6.8,
+   "low_op": "lt",
+   "high_op": "gt",
+   "source": "Roche Elecsys FT3 III method sheet, ref. 06437206190, V4.0 (2021-04): 'Euthyroid: 3.1-6.8 pmol/L', 2.5th-97.5th percentiles, n = 5366 [main ref 53]",
+   "ref": 53,
+   "authority": "RI"
+  },
+  {
+   "analyte": "HGB",
+   "unit": "g/dL",
+   "low_attention": 12.0,
+   "low_op": "lt",
+   "source": "WHO 2024 haemoglobin cut-offs, Table 2: non-pregnant women < 120 g/L [main ref 33]",
+   "ref": 33,
+   "authority": "RI"
+  },
+  {
+   "analyte": "B12",
+   "unit": "ng/L",
+   "low_attention": 200.0,
+   "low_op": "lt",
+   "source": "BCSH 2014 (Devalia et al.) [main ref 46], p. 499, Recommendation 4: cut-off 148 pmol/l (200 ng/l)",
+   "ref": 46,
+   "authority": "RI"
+  },
+  {
+   "analyte": "FOL",
+   "unit": "µg/L",
+   "low_attention": 3.0,
+   "low_op": "lt",
+   "source": "BCSH 2014 (Devalia et al.) [main ref 46], p. 507, Recommendation 1: < 7 nmol/l (3 µg/l) indicative of deficiency",
+   "ref": 46,
+   "authority": "RI"
+  },
+  {
+   "analyte": "VD3",
+   "unit": "µg/L",
+   "low_attention": 20.0,
+   "low_op": "lt",
+   "source": "ROS/NOS 2014 (Aspray et al.): > 50 nmol/L sufficient [main ref 49] (50 nmol/L = 20 µg/L)",
+   "ref": 49,
+   "authority": "RI"
+  },
+  {
+   "analyte": "K",
+   "unit": "mmol/L",
+   "low_attention": 3.5,
+   "high_attention": 5.0,
+   "low_op": "lt",
+   "high_op": "gt",
+   "source": "UKKA hyperkalaemia guideline (2020, updated July 2026), Table 25 caption: 'normokalaemia (K+ 3.5-5.0 mmol/l)' [main ref 50]",
+   "ref": 50,
+   "authority": "RI"
+  },
+  {
+   "analyte": "CHOL",
+   "unit": "mg/dL",
+   "high_attention": 200.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III executive summary [main ref 51], Table 2: < 200 desirable",
+   "ref": 51,
+   "authority": "RI"
+  },
+  {
+   "analyte": "LDL",
+   "unit": "mg/dL",
+   "high_attention": 100.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III executive summary [main ref 51], Table 2: < 100 optimal",
+   "ref": 51,
+   "authority": "RI"
+  },
+  {
+   "analyte": "TRI",
+   "unit": "mg/dL",
+   "high_attention": 150.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III executive summary [main ref 51], p. 18: < 150 normal",
+   "ref": 51,
+   "authority": "RI"
+  }
+ ]
+}

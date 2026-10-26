@@ -1,0 +1,478 @@
+{
+ "status": "D5 2026-10-20: rules per author decisions D5 (FT4-stratified thyroid rules) and D9 (verified guideline limits only); recommended set adopted by the author ('直接就给你推荐的'). Rules for CKD, liver disease and chronic inflammation are suspended (no guideline decision limit for creatinine, liver enzymes or CRP); mild/moderate hyperkalaemia has no hidden rule (it is hyperkalaemia, not a subclinical state). One rule per disease label; 'any' lists alternative qualifying tests.",
+ "suspended": [
+  "Chronic_Kidney_Disease",
+  "Early_CKD_Risk",
+  "Liver_Disease",
+  "Chronic_Low_Grade_Inflammation",
+  "Mild_Moderate_Hyperkalaemia (hidden)"
+ ],
+ "rules": [
+  {
+   "id": "O-DM",
+   "disease": "Diabetes_Mellitus",
+   "family": "diabetes",
+   "layer": "overt",
+   "any": [
+    {
+     "analyte": "A1F",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "GLU",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "A1F",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "GLU",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "high"
+    }
+   ],
+   "source": "ADA 2025 [29]; WHO 2011 [30]; WHO/IDF 2006 [42]; NICE PH38 [43]"
+  },
+  {
+   "id": "O-HYPO",
+   "disease": "Hypothyroidism",
+   "family": "hypothyroidism",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "TSH",
+     "state": "abnormal",
+     "direction": "high"
+    },
+    {
+     "analyte": "T4L",
+     "state": "abnormal",
+     "direction": "low"
+    }
+   ],
+   "source": "NICE NG145 [44]"
+  },
+  {
+   "id": "O-HYPER",
+   "disease": "Hyperthyroidism",
+   "family": "hyperthyroidism",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "TSH",
+     "state": "abnormal",
+     "direction": "low"
+    }
+   ],
+   "any": [
+    {
+     "analyte": "T4L",
+     "state": "abnormal",
+     "direction": "high"
+    },
+    {
+     "analyte": "T3L",
+     "state": "abnormal",
+     "direction": "high"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "T4L",
+     "state": "abnormal",
+     "direction": "high"
+    },
+    {
+     "analyte": "T3L",
+     "state": "abnormal",
+     "direction": "high"
+    }
+   ],
+   "source": "NICE NG145 [44]"
+  },
+  {
+   "id": "O-ANAEMIA",
+   "disease": "Anaemia",
+   "family": "anaemia",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "HGB",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "low"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "B12",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "low"
+    },
+    {
+     "analyte": "FOL",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "low"
+    }
+   ],
+   "source": "WHO 2024 [33]"
+  },
+  {
+   "id": "O-B12",
+   "disease": "Vitamin_B12_Deficiency",
+   "family": "b12",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "B12",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "low"
+    }
+   ],
+   "source": "NICE NG239 [45]; BCSH 2014 [46]"
+  },
+  {
+   "id": "O-FOLATE",
+   "disease": "Folate_Deficiency",
+   "family": "folate",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "FOL",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "low"
+    }
+   ],
+   "source": "WHO 2015 [47]; BCSH 2014 [46]"
+  },
+  {
+   "id": "O-VITD",
+   "disease": "Vitamin_D_Deficiency",
+   "family": "vitd",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "VD3",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "low"
+    }
+   ],
+   "source": "SACN 2016 [48]; ROS [49]"
+  },
+  {
+   "id": "O-HYPERK",
+   "disease": "Severe_Hyperkalaemia",
+   "family": "potassium",
+   "layer": "overt",
+   "all": [
+    {
+     "analyte": "K",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    }
+   ],
+   "source": "UKKA [50]"
+  },
+  {
+   "id": "O-LIPID",
+   "disease": "Dyslipidaemia",
+   "family": "lipids",
+   "layer": "overt",
+   "any": [
+    {
+     "analyte": "CHOL",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "LDL",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "TRI",
+     "level": [
+      "CRITICAL"
+     ],
+     "direction": "high"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "CHOL",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "LDL",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "TRI",
+     "level": [
+      "ATTENTION",
+      "CRITICAL"
+     ],
+     "direction": "high"
+    }
+   ],
+   "source": "NCEP ATP III [51]"
+  },
+  {
+   "id": "H-PREDM",
+   "disease": "Prediabetes",
+   "family": "diabetes",
+   "layer": "hidden",
+   "any": [
+    {
+     "analyte": "A1F",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "GLU",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "A1F",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "GLU",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    }
+   ],
+   "overt_counterparts": [
+    "O-DM"
+   ],
+   "source": "ADA 2025 [29]; NICE PH38 [43]"
+  },
+  {
+   "id": "H-SCH",
+   "disease": "Subclinical_Hypothyroidism",
+   "family": "hypothyroidism",
+   "layer": "hidden",
+   "all": [
+    {
+     "analyte": "TSH",
+     "state": "abnormal",
+     "direction": "high"
+    }
+   ],
+   "exclude": [
+    {
+     "analyte": "T4L",
+     "state": "abnormal",
+     "direction": "any"
+    }
+   ],
+   "overt_counterparts": [
+    "O-HYPO"
+   ],
+   "indeterminate_if_missing": [
+    "T4L"
+   ],
+   "source": "ETA 2013 [22]; NICE NG145 [44]"
+  },
+  {
+   "id": "H-SCHYPER",
+   "disease": "Subclinical_Hyperthyroidism",
+   "family": "hyperthyroidism",
+   "layer": "hidden",
+   "all": [
+    {
+     "analyte": "TSH",
+     "state": "abnormal",
+     "direction": "low"
+    }
+   ],
+   "exclude": [
+    {
+     "analyte": "T4L",
+     "state": "abnormal",
+     "direction": "any"
+    },
+    {
+     "analyte": "T3L",
+     "state": "abnormal",
+     "direction": "any"
+    }
+   ],
+   "overt_counterparts": [
+    "O-HYPER"
+   ],
+   "indeterminate_if_missing": [
+    "T4L"
+   ],
+   "source": "NICE NG145 [44]"
+  },
+  {
+   "id": "H-B12",
+   "disease": "Possible_B12_Deficiency",
+   "family": "b12",
+   "layer": "hidden",
+   "all": [
+    {
+     "analyte": "B12",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "low"
+    }
+   ],
+   "overt_counterparts": [
+    "O-B12"
+   ],
+   "source": "NICE NG239 [45]"
+  },
+  {
+   "id": "H-FOLATE",
+   "disease": "Indeterminate_Folate_Status",
+   "family": "folate",
+   "layer": "hidden",
+   "all": [
+    {
+     "analyte": "FOL",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "low"
+    }
+   ],
+   "overt_counterparts": [
+    "O-FOLATE"
+   ],
+   "source": "BCSH 2014 [46]; WHO 2015 [47]"
+  },
+  {
+   "id": "H-VITD",
+   "disease": "Vitamin_D_Insufficiency",
+   "family": "vitd",
+   "layer": "hidden",
+   "all": [
+    {
+     "analyte": "VD3",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "low"
+    }
+   ],
+   "overt_counterparts": [
+    "O-VITD"
+   ],
+   "source": "ROS [49]"
+  },
+  {
+   "id": "H-LIPID",
+   "disease": "Borderline_High_Lipids",
+   "family": "lipids",
+   "layer": "hidden",
+   "any": [
+    {
+     "analyte": "CHOL",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "LDL",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "TRI",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    }
+   ],
+   "support": [
+    {
+     "analyte": "CHOL",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "LDL",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    },
+    {
+     "analyte": "TRI",
+     "level": [
+      "ATTENTION"
+     ],
+     "direction": "high"
+    }
+   ],
+   "overt_counterparts": [
+    "O-LIPID"
+   ],
+   "source": "NCEP ATP III [51]"
+  }
+ ]
+}

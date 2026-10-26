@@ -1,0 +1,292 @@
+{
+ "status": "Decision limits used in the revised manuscript (LHS 5428192); each row names the guideline document that states the limit (Supporting Information S5, Table A.1). Units are the units stored in Result_with_uid.csv.",
+ "authorities": {
+  "ADA": {
+   "name": "American Diabetes Association, Standards of Care 2025, ch. 2",
+   "evidence": "1A",
+   "evidence_note": "grade as printed in the submitted Table 1; not re-verified"
+  },
+  "WHO": {
+   "name": "World Health Organization (HbA1c 2011; WHO/IDF 2006; anaemia 2024; folate indicator)",
+   "evidence": "1A",
+   "evidence_note": "grade as printed in the submitted Table 1; not re-verified"
+  },
+  "NICE": {
+   "name": "NICE (PH38/QS209; NG145; NG239)",
+   "evidence": "1A",
+   "evidence_note": "grade as printed in the submitted Table 1; not re-verified"
+  },
+  "ETA": {
+   "name": "European Thyroid Association 2013 subclinical hypothyroidism guideline",
+   "evidence": "1A",
+   "evidence_note": "grade as printed in the submitted Table 1; not re-verified"
+  },
+  "ATA": {
+   "name": "American Thyroid Association 2014 hypothyroidism guideline",
+   "evidence": "1A",
+   "evidence_note": "grade as printed in the submitted Table 1; not re-verified"
+  },
+  "BCSH": {
+   "name": "British Committee for Standards in Haematology 2014 cobalamin and folate guideline",
+   "evidence": null,
+   "evidence_note": "Oxford CEBM grade not verified; to be settled in D9 step 2 (Table 1)"
+  },
+  "SACN": {
+   "name": "UK Department of Health / SACN vitamin D status (as reported in NICE PH56)",
+   "evidence": null,
+   "evidence_note": "Oxford CEBM grade not verified; to be settled in D9 step 2 (Table 1)"
+  },
+  "ROS": {
+   "name": "Royal (National) Osteoporosis Society vitamin D guideline",
+   "evidence": null,
+   "evidence_note": "Oxford CEBM grade not verified; to be settled in D9 step 2 (Table 1)"
+  },
+  "UKKA": {
+   "name": "UK Kidney Association 2023 hyperkalaemia guideline",
+   "evidence": null,
+   "evidence_note": "Oxford CEBM grade not verified; to be settled in D9 step 2 (Table 1)"
+  },
+  "NCEP": {
+   "name": "NCEP ATP III 2001 lipid classification",
+   "evidence": null,
+   "evidence_note": "Oxford CEBM grade not verified; to be settled in D9 step 2 (Table 1)"
+  }
+ },
+ "rows": [
+  {
+   "authority": "ADA",
+   "analyte": "A1F",
+   "unit": "%",
+   "high_attention": 5.7,
+   "high_critical": 6.5,
+   "high_op": "ge",
+   "source": "ADA 2025 Tables 2.1-2.2",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "NICE",
+   "analyte": "A1F",
+   "unit": "%",
+   "high_attention": 6.0,
+   "high_critical": 6.5,
+   "high_op": "ge",
+   "source": "NICE PH38/QS209 (42-47 mmol/mol); diagnosis 48 mmol/mol",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "WHO",
+   "analyte": "A1F",
+   "unit": "%",
+   "high_critical": 6.5,
+   "high_op": "ge",
+   "source": "WHO 2011 HbA1c report (no recommendation below 6.5%)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "ADA",
+   "analyte": "GLU",
+   "unit": "mg/dL",
+   "high_attention": 100.0,
+   "high_critical": 126.0,
+   "high_op": "ge",
+   "source": "ADA 2025",
+   "verified": "audit-2026-10-19",
+   "note": "fasting status of the 40 GLU results unknown"
+  },
+  {
+   "authority": "WHO",
+   "analyte": "GLU",
+   "unit": "mg/dL",
+   "high_attention": 110.0,
+   "high_critical": 126.0,
+   "high_op": "ge",
+   "source": "WHO/IDF 2006 (6.1 / 7.0 mmol/L)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "NICE",
+   "analyte": "GLU",
+   "unit": "mg/dL",
+   "high_attention": 99.0,
+   "high_critical": 126.0,
+   "high_op": "ge",
+   "source": "NICE PH38 (5.5-6.9 mmol/L)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "NICE",
+   "analyte": "TSH",
+   "unit": "mU/L",
+   "low_attention": 0.4,
+   "high_attention": 4.0,
+   "high_critical": 10.0,
+   "low_op": "lt",
+   "high_attention_op": "gt",
+   "high_critical_op": "ge",
+   "source": "NICE NG145 (laboratory reference range; consider treatment at TSH >= 10)",
+   "verified": "audit-2026-10-19",
+   "note": "NG145 gives no fixed TSH range and defers to the laboratory reference range; 0.4/4.0 is the range quoted in ATA 2014 (audit row 7b), used here as a stand-in. The >= 10 treatment threshold is NICE (audit row 7c)."
+  },
+  {
+   "authority": "ETA",
+   "analyte": "TSH",
+   "unit": "mU/L",
+   "high_attention": 4.0,
+   "high_critical": 10.0,
+   "high_op": "gt",
+   "source": "ETA 2013 (mild 4.0-10.0; marked > 10)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "ATA",
+   "analyte": "TSH",
+   "unit": "mU/L",
+   "low_attention": 0.4,
+   "high_attention": 4.0,
+   "low_op": "lt",
+   "high_op": "gt",
+   "source": "ATA 2014 (reference range 0.4-4.0)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "WHO",
+   "analyte": "HGB",
+   "unit": "g/dL",
+   "low_critical": 12.0,
+   "low_op": "lt",
+   "source": "WHO 2024 anaemia cut-off, non-pregnant women 12.0 g/dL (men 13.0); no sex field, so 12.0 is used for all results; below the cut-off = CRITICAL (author decision 2026-10-19)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "NICE",
+   "analyte": "B12",
+   "unit": "ng/L",
+   "low_critical": 180.0,
+   "low_attention": 350.0,
+   "low_critical_op": "lt",
+   "low_attention_op": "le",
+   "source": "NICE NG239 Table 1 (total B12)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "BCSH",
+   "analyte": "B12",
+   "unit": "ng/L",
+   "low_critical": 200.0,
+   "low_op": "lt",
+   "source": "Devalia et al. 2014 (about 200 ng/L / 148 pmol/L)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "WHO",
+   "analyte": "FOL",
+   "unit": "µg/L",
+   "low_critical": 3.0,
+   "low_attention": 4.0,
+   "low_op": "lt",
+   "source": "WHO folate indicator (<3 haematological; <4 metabolic)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "BCSH",
+   "analyte": "FOL",
+   "unit": "µg/L",
+   "low_critical": 3.0,
+   "low_attention": 4.5,
+   "low_op": "lt",
+   "source": "BCSH 2014: \"<7 nmol/l (3 µg/l) is indicative of folate deficiency\"; indeterminate zone \"between approximately 7 and 10 nmol/l (3 and 4.5 µg/l)\" (the guideline's own µg/L figures are used)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "SACN",
+   "analyte": "VD3",
+   "unit": "µg/L",
+   "low_critical": 10.0,
+   "low_op": "lt",
+   "source": "DH/SACN < 25 nmol/L (= 10 µg/L)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "ROS",
+   "analyte": "VD3",
+   "unit": "µg/L",
+   "low_critical": 12.0,
+   "low_attention": 20.0,
+   "low_op": "lt",
+   "source": "ROS < 30 nmol/L deficient, 30-50 may be inadequate (= 12 / 20 µg/L)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "UKKA",
+   "analyte": "K",
+   "unit": "mmol/L",
+   "high_attention": 5.5,
+   "high_critical": 6.5,
+   "high_op": "ge",
+   "source": "UKKA 2023 (mild 5.5-5.9, moderate 6.0-6.4, severe >= 6.5)",
+   "verified": "audit-2026-10-19"
+  },
+  {
+   "authority": "NCEP",
+   "analyte": "CHOL",
+   "unit": "mg/dL",
+   "high_attention": 200.0,
+   "high_critical": 240.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III 2001",
+   "verified": "audit-2026-10-19",
+   "decision": "author 2026-10-19"
+  },
+  {
+   "authority": "NCEP",
+   "analyte": "LDL",
+   "unit": "mg/dL",
+   "high_attention": 130.0,
+   "high_critical": 160.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III 2001",
+   "verified": "audit-2026-10-19",
+   "decision": "author 2026-10-19"
+  },
+  {
+   "authority": "NCEP",
+   "analyte": "TRI",
+   "unit": "mg/dL",
+   "high_attention": 150.0,
+   "high_critical": 200.0,
+   "high_op": "ge",
+   "source": "NCEP ATP III 2001",
+   "verified": "audit-2026-10-19",
+   "decision": "author 2026-10-19"
+  }
+ ],
+ "lab_reference_tier": {
+  "note": "Free T4 and free T3 have no guideline decision limit; they are classified against the reference intervals in spec/reference_intervals.json (SI Table A.2), never vote, and are used only in the thyroid rules. The other analytes listed here have no guideline decision limit and are not used in the analysis (decision D10, 2026-10-21). TestType_thresholds_and_categories.csv is no longer read.",
+  "use_for_rules": [
+   "T4L",
+   "T3L"
+  ],
+  "analytes": [
+   "CRP",
+   "CREA",
+   "URE",
+   "GOT",
+   "GPT",
+   "GGT",
+   "T4L",
+   "T3L",
+   "ERY",
+   "GB",
+   "PLA",
+   "FE"
+  ]
+ },
+ "decisions": {
+  "D9": "(a) verified guideline thresholds only; analytes without a guideline decision limit move to the reference-interval tier (author, 2026-10-19)",
+  "lipids": "NCEP ATP III 2001 (author, 2026-10-19)",
+  "haemoglobin_cutoff": "12.0 g/dL for all results (WHO non-pregnant women); no sex field, men 12.0-12.9 are missed; stated as a limitation (author, 2026-10-19)",
+  "haemoglobin_tiers": "below the WHO anaemia cut-off = CRITICAL; no ATTENTION tier for Hb (author, 2026-10-19)",
+  "tier_principle": "CRITICAL = the guideline category that implies a diagnosis, a treatment decision, a severe grade or the highest risk class (e.g. HbA1c >= 6.5% diabetes; TSH >= 10 treatment; Hb < 12.0 anaemia; UKKA K >= 6.5 severe; NCEP TC >= 240 'high'); ATTENTION = the guideline's intermediate, at-risk, borderline or indeterminate category. Operators (lt/le/ge/gt) follow the source wording; see items/D9/D9_step1_thresholds.md",
+  "unit_conversions": "glucose mg/dL = mmol/L x 18; 25(OH)D ug/L = nmol/L / 2.5; folate ug/L = nmol/L / 2.266. Where a guideline prints a limit in the stored unit, that figure is used (BCSH folate 3 and 4.5 ug/L)."
+ }
+}

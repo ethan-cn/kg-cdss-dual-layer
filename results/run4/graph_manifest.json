@@ -1,0 +1,23 @@
+{
+ "counts": {
+  "patients": 5653,
+  "tests": 31849,
+  "voted_by": 43946,
+  "classified_by": 3992,
+  "disease_risks": 5862,
+  "based_on_test": 6674
+ },
+ "files": {
+  "authorities.csv": "e94155e434f10c46ef186198a7c9f6c64c5b6a68664c72fa5013294b4ed3c245",
+  "disease_risks.csv": "8b728d6be4d494f63fedc967113ce6c22084129a9bb7f104124a350b63175670",
+  "load_graph.cypher": "6501debca6408d345ea2d0c0dc77d19f9064398c595f23c999377391a9091c7f",
+  "patients.csv": "46fb6084af936dfb8336a44d3651c994d9b295289a3a8f18e5d32b7e3701299a",
+  "reference_intervals.csv": "eed9b4500b348688fd460b99076c16524b1788bcf45a940a5f15fc6b61747d49",
+  "rel_based_on_test.csv": "f40b26273bfcca2510952aaee6cc3fb81a70c94b02ef3a14541d5eb22eaa09dd",
+  "rel_classified_by.csv": "f56858a413e6cbe22bff983a14004e4605270d9101a113fd6ebd6f09f7479ea3",
+  "rel_has_disease_risk.csv": "04278de72cd8046ab26d95a8e9ec2164116032988886796cb028ef3bcaefe21d",
+  "rel_has_test.csv": "55a2d899b463e21e014164b50692f5ce1bb1b74a1978664990c6940d9db42512",
+  "rel_voted_by.csv": "af7c2f932a083155d89dfeae920a9f601189f03ffdabe7f06cc2ac33e861115c",
+  "tests.csv": "7d7dba6c15ef32b68b77d713662896aaa68df84d0adfb26f30a28552275ab000"
+ }
+}

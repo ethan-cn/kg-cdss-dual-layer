@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "A Knowledge Graph Clinical Decision Support System for Multi-Authority Guideline Reconciliation and Dual-Layer Overt/Subclinical Disease Inference"
+authors:
+  - family-names: Ding
+    given-names: Chenyang
+  - family-names: Taha
+    given-names: Ahmad
+  - family-names: Ponciano
+    given-names: João
+version: 2.0.0
+date-released: 2026-10-26
+repository-code: "https://github.com/ethan-cn/kg-cdss-dual-layer"
+license: MIT
