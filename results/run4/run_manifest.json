@@ -6,9 +6,9 @@
  },
  "spec": {
   "thresholds.json": "85b31538ac6e662194d94a4a424da5504d4af69aea64639e66e6cdcfb9ba076a",
-  "rules.json": "b683754eb5d7dd3fa6ce6605ae3b9b86ff94a53ef7c39eca50125ca28117d63a",
-  "reference_intervals.json": "7f95649195320c606f3a9dc2e7cc1194ce4be39d04eb1064c503966db31e5699",
-  "authorities.json": "344368bdbca67e0358f5de385fa06d0f33c8b556e1d3c9470eb9342575765667"
+  "rules.json": "ae2e1be313cb094f2f449b4bb07d77ff7999a75010dc3b0774237f44464ff536",
+  "reference_intervals.json": "9239d3e9386f8fbe79a7f2c81c0c9e7536ef97c121b22029a672218c0d5c0089",
+  "authorities.json": "fddfe6efc753347247f626df5ca286e516a1a16901e189313b70b4c4e6e8bdcd"
  },
  "code": {
   "analysis/s1_constants.py": "7455b89c792c485279be7dff456cd6211f62f4429aac21136af097feab347213",

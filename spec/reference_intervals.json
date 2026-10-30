@@ -7,8 +7,8 @@
    "unit": "%",
    "high_attention": 5.7,
    "high_op": "ge",
-   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 29]: prediabetes A1C 5.7-6.4%",
-   "ref": 29,
+   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 28]: prediabetes A1C 5.7-6.4%",
+   "ref": 28,
    "authority": "RI"
   },
   {
@@ -16,8 +16,8 @@
    "unit": "mg/dL",
    "high_attention": 100.0,
    "high_op": "ge",
-   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 29]: IFG 100-125 mg/dL",
-   "ref": 29,
+   "source": "ADA 2025, Standards of Care Section 2, Table 2.2 (prediabetes criteria) [main ref 28]: IFG 100-125 mg/dL",
+   "ref": 28,
    "authority": "RI"
   },
   {
@@ -27,8 +27,8 @@
    "high_attention": 4.0,
    "low_op": "lt",
    "high_op": "gt",
-   "source": "ATA 2014 (Jonklaas et al.), reference range quoted as 0.4-4.0 mIU/L [main ref 41]",
-   "ref": 41,
+   "source": "ATA 2014 (Jonklaas et al.), reference range quoted as 0.4-4.0 mIU/L [main ref 38]",
+   "ref": 38,
    "authority": "RI"
   },
   {
@@ -38,8 +38,8 @@
    "high_attention": 22.0,
    "low_op": "lt",
    "high_op": "gt",
-   "source": "Roche Elecsys FT4 III method sheet, ref. 07976836190, V3.0 (2021-11): 'Euthyroid: 12-22 pmol/L', 2.5th-97.5th percentiles, n = 801 [main ref 52]",
-   "ref": 52,
+   "source": "Roche Elecsys fT4 package insert (Chinese edition), ref. 11731297 (2001): normal reference values 12-22 pmol/L, 2.5th-97.5th percentiles, n = 801 [main ref 49]",
+   "ref": 49,
    "authority": "RI"
   },
   {
@@ -49,8 +49,8 @@
    "high_attention": 6.8,
    "low_op": "lt",
    "high_op": "gt",
-   "source": "Roche Elecsys FT3 III method sheet, ref. 06437206190, V4.0 (2021-04): 'Euthyroid: 3.1-6.8 pmol/L', 2.5th-97.5th percentiles, n = 5366 [main ref 53]",
-   "ref": 53,
+   "source": "Roche Elecsys FT3 III method sheet, ref. 09005803500, V3.0 (2024-11): expected values 3.1-6.8 pmol/L, 2.5th-97.5th percentiles, n = 5366 [main ref 50]",
+   "ref": 50,
    "authority": "RI"
   },
   {
@@ -58,8 +58,8 @@
    "unit": "g/dL",
    "low_attention": 12.0,
    "low_op": "lt",
-   "source": "WHO 2024 haemoglobin cut-offs, Table 2: non-pregnant women < 120 g/L [main ref 33]",
-   "ref": 33,
+   "source": "WHO 2024 haemoglobin cut-offs, Table 2: non-pregnant women < 120 g/L [main ref 30]",
+   "ref": 30,
    "authority": "RI"
   },
   {
@@ -67,8 +67,8 @@
    "unit": "ng/L",
    "low_attention": 200.0,
    "low_op": "lt",
-   "source": "BCSH 2014 (Devalia et al.) [main ref 46], p. 499, Recommendation 4: cut-off 148 pmol/l (200 ng/l)",
-   "ref": 46,
+   "source": "BCSH 2014 (Devalia et al.) [main ref 43], p. 499, Recommendation 4: cut-off 148 pmol/l (200 ng/l)",
+   "ref": 43,
    "authority": "RI"
   },
   {
@@ -76,8 +76,8 @@
    "unit": "µg/L",
    "low_attention": 3.0,
    "low_op": "lt",
-   "source": "BCSH 2014 (Devalia et al.) [main ref 46], p. 507, Recommendation 1: < 7 nmol/l (3 µg/l) indicative of deficiency",
-   "ref": 46,
+   "source": "BCSH 2014 (Devalia et al.) [main ref 43], p. 507, Recommendation 1: < 7 nmol/l (3 µg/l) indicative of deficiency",
+   "ref": 43,
    "authority": "RI"
   },
   {
@@ -85,8 +85,8 @@
    "unit": "µg/L",
    "low_attention": 20.0,
    "low_op": "lt",
-   "source": "ROS/NOS 2014 (Aspray et al.): > 50 nmol/L sufficient [main ref 49] (50 nmol/L = 20 µg/L)",
-   "ref": 49,
+   "source": "ROS/NOS 2014 (Aspray et al.): > 50 nmol/L sufficient [main ref 46] (50 nmol/L = 20 µg/L)",
+   "ref": 46,
    "authority": "RI"
   },
   {
@@ -96,8 +96,8 @@
    "high_attention": 5.0,
    "low_op": "lt",
    "high_op": "gt",
-   "source": "UKKA hyperkalaemia guideline (2020, updated July 2026), Table 25 caption: 'normokalaemia (K+ 3.5-5.0 mmol/l)' [main ref 50]",
-   "ref": 50,
+   "source": "UKKA hyperkalaemia guideline (2020, updated July 2026), Table 25 caption: 'normokalaemia (K+ 3.5-5.0 mmol/l)' [main ref 47]",
+   "ref": 47,
    "authority": "RI"
   },
   {
@@ -105,8 +105,8 @@
    "unit": "mg/dL",
    "high_attention": 200.0,
    "high_op": "ge",
-   "source": "NCEP ATP III executive summary [main ref 51], Table 2: < 200 desirable",
-   "ref": 51,
+   "source": "NCEP ATP III executive summary [main ref 48], Table 2: < 200 desirable",
+   "ref": 48,
    "authority": "RI"
   },
   {
@@ -114,8 +114,8 @@
    "unit": "mg/dL",
    "high_attention": 100.0,
    "high_op": "ge",
-   "source": "NCEP ATP III executive summary [main ref 51], Table 2: < 100 optimal",
-   "ref": 51,
+   "source": "NCEP ATP III executive summary [main ref 48], Table 2: < 100 optimal",
+   "ref": 48,
    "authority": "RI"
   },
   {
@@ -123,8 +123,8 @@
    "unit": "mg/dL",
    "high_attention": 150.0,
    "high_op": "ge",
-   "source": "NCEP ATP III executive summary [main ref 51], p. 18: < 150 normal",
-   "ref": 51,
+   "source": "NCEP ATP III executive summary [main ref 48], p. 18: < 150 normal",
+   "ref": 48,
    "authority": "RI"
   }
  ]
